@@ -22,7 +22,7 @@ public class Tp2Application implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception{
         System.out.println("*** Insertion ***");
-        studentRepository.save(
+        /*studentRepository.save(
                 new Student(null,"A1","Amine",new Date(),true,null));
         studentRepository.save(
                 new Student(null,"A2","Ilyas",new Date(),true,null));
@@ -61,6 +61,6 @@ public class Tp2Application implements CommandLineRunner {
         List<Student> activeStudents=studentRepository. findByStillActive(true);
         activeStudents.forEach(s -> {
             System.out.println(s.toString());
-        });
+        });*/
     }
 }
