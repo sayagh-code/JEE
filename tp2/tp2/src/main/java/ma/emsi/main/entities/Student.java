@@ -7,7 +7,6 @@ import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.util.Date;
-
 @Entity @Table(name = "EMSI_STUDENTS")
 @Data @AllArgsConstructor @NoArgsConstructor
 public class Student {
@@ -22,4 +21,7 @@ public class Student {
     private boolean stillActive;
     @Temporal(TemporalType.TIMESTAMP) @CreationTimestamp
     private Date lastConnection;
+    @ManyToOne
+    private Groupe groupe;
+
 }
